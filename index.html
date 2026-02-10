@@ -4,66 +4,37 @@
         <meta charset="UTF-8" />
         <title>Convite para o nosso casamento</title>
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Great+Vibes&display=swap" rel="stylesheet">
     </head>
 
     <body>
         <div class="container">
-            <!-- HERO -->
-            <section class="hero">
-                <h1>Bruno & Carol</h1>
-                <p>
-                    Estamos felizes de poder celebrar esse momento com você
-                    ❤️
-                </p>
-                <p>Por favor confirme a sua presença abaixo</p>
-            </section>
-
-            <!-- WEDDING INFO -->
-            <section class="info-card">
-                <h2>Detalhes do casamento</h2>
-
-                <div class="info-grid">
-                    <div class="info-item">
-                        <h3>Data</h3>
-                        <p>25 de julho de 2026</p>
+            <div class="card">
+                <img src="./uri_ifs___M_749951f5-f213-4b11-b19c-d1456459f422.webp" alt="Flores" width="100%" />
+                <div class="header">
+                    <h1>Bruno</h1>
+                    <h3>&</h3>
+                    <h1>Carol</h1>
+                </div>
+                <p class="subtitle"><em>te convidam para celebrar seu casamento no dia</em></p>
+                <img class="frame" src="./frame.svg" alt="frame" width="75%" />
+                <div class="icons">
+                    <div class="icon">
+                        <a href="https://maps.app.goo.gl/GbsdZ8Zc18vMMkH8A" target="_blank"><img src="./igreja.svg" alt="Igreja" /></a>
+                        <p><em>Local da cerimônia</em></p>
                     </div>
-
-                    <div class="info-item">
-                        <h3>Cerimônia</h3>
-                        <p>16:30 – Igreja Cristã Presbiteriana do Guará</p>
+                    <div class="icon">
+                        <a href="" target="_blank"><img src="./restaurante.svg" alt="Restaurante" /></a>
+                        <p><em>Local da recepção</em></p>
                     </div>
-
-                    <div class="info-item">
-                        <h3>Recepção</h3>
-                        <p>19:00 – Buffalo Bio</p>
-                    </div>
-
-                    <div class="info-item">
-                        <h3>Vestimentas</h3>
-                        <p>Formais</p>
+                    <div class="icon">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc23V95VE6DWBkkaT3pkz40Woz0gkEbbxXYiYsPqdMa0IFw7Q/viewform" target="_blank"><img src="./checkmark.svg" alt="Confirmação"></a>
+                        <p><em>Confirme sua presença aqui</em></p>
                     </div>
                 </div>
-            </section>
-            <!-- RSVP FORM -->
-            <section class="form-card">
-                <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSc23V95VE6DWBkkaT3pkz40Woz0gkEbbxXYiYsPqdMa0IFw7Q/viewform?embedded=true"
-                >
-                Carregando…
-            </iframe>
-        </section>
-        
-      
-        <section class="countdown-card">
-            <!-- Countdown Card -->
-            <div>
-                <h2>Contagem regressiva</h2>
-                <p id="countdown" class="countdown"></p>
             </div>
-        </section>
         </div>
-        <script src="script.js">
-        </script>
     </body>
 </html>
