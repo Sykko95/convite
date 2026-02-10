@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background: #ffe5c5;
+    background: #fff0e8;
     color: #6d452b;
     font-family: "EB Garamond", serif;
     font-weight: 400;
@@ -16,13 +16,13 @@ body {
         background: no-repeat url(./background.png);
         background-size: 100%;
         background-position-y: center;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 8px 24px rgba(109, 69, 43, 0.18);
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-bottom: 60px;
 
-        img {
+        .header {
             border-radius: 24px 24px 0 0;
         }
         
@@ -61,7 +61,7 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
-            margin-bottom: 20px;
+            margin-bottom: 3rem;
 
             .icon {
                 width: 33%;
