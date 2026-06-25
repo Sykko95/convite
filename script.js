@@ -3,44 +3,13 @@ const countdownCard = document.getElementById("countdownCard");
 function timeUntil(targetDate) {
     const now = new Date();
     const target = new Date(targetDate);
+    let diffMs = target - now;
 
-    let months =
-        (target.getFullYear() - now.getFullYear()) * 12 +
-        (target.getMonth() - now.getMonth());
+    const months = Math.floor(diffMs / (1000 * 60 * 60 * 24 * 30));
+    diffMs %= 1000 * 60 * 60 * 24 * 30;
 
-    let days = target.getDate() - now.getDate();
-
-    if (days < 0) {
-        months--;
-        const daysInPrevMonth = new Date(
-            target.getFullYear(),
-            target.getMonth(),
-            0
-        ).getDate();
-        days += daysInPrevMonth;
-    }
-
-    // If time-of-day already passed, borrow 1 day
-    if (now.getHours() * 3600 + now.getMinutes() * 60 + now.getSeconds() > target.getHours() * 3600 + target.getMinutes() * 60 + target.getSeconds()) {
-        days--;
-        if (days < 0) {
-            months--;
-
-            const prevMonth = new Date(
-                target.getFullYear(),
-                target.getMonth() - 1,
-                0
-            );
-
-            days = prevMonth.getDate();
-        }
-    };
-
-    const refDate = new Date(now);
-    refDate.setMonth(refDate.getMonth() + months);
-    refDate.setDate(refDate.getDate() + days);
-
-    let diffMs = target - refDate;
+    const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    diffMs %= 1000 * 60 * 60 * 24;
 
     const hours = Math.floor(diffMs / (1000 * 60 * 60));
     diffMs %= 1000 * 60 * 60;
